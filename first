@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  
+
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body{
+      width: 100%;
+    }
+    ::placeholder{
+      color: rgba(128, 128, 128, 0.877) !important;
+    }
+    input ::after{
+      border: red solid 1px !important;
+    }
+
+    @media only screen and (max-width: 375px) {
+      body{
+        align-items: center;
+        text-align: center;
+        background-color:  hsl(0, 100%, 74%) ;
+        background-image: url(images/bg-intro-mobile.png) ;
+        padding: 0px;
+        width: 375px;
+      }
+      .firstDiv{
+        width: 80%;
+        text-align: center;
+        align-items: center;
+      }
+      #headerDiv{
+        margin: 70px 0px 10px;
+      }
+      #header{
+        width: 80%;
+        color: white;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.9em;
+      }
+      #matnDiv{
+        margin: 10px auto;
+        width: 90%;
+      }
+      #matns{
+        color: rgba(255, 255, 255, 0.733);
+        font-size: 12px;
+        font-family: 'Poppins', sans-serif;
+      }
+      .second-Div{
+        text-align: center;
+        align-items: center;
+        display: list-item;
+      }
+      .blueBox{
+        text-align: center;
+        align-items: center;
+        line-height: 1.8em;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        width: 85%;
+        border: 1px solid hsl(248, 32%, 49%);
+        background-color: hsl(248, 32%, 49%);
+        box-shadow: 0px 8px 0px 0px hsla(249, 10%, 26%, 0.253)   ;
+        border-radius: 8px;
+        height: 75px;
+        padding: 13px 25px;
+        margin: 25px auto;
+        font-size: 13px;
+        font-weight: lighter;
+      }
+      #days{
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      .box{
+        text-align: center;
+        align-items: center;
+        width: 85%;
+        border: 1px solid white;
+        background-color: white;
+        margin: 10px auto;
+        border-radius: 10px;
+      }
+      .ins{
+        width: 86%;
+        margin-top: 5px;
+        height: 45px;
+      }
+      #first{
+        margin-top: 20px;
+      }
+      .greenButt{
+        align-items: center;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        margin-top: 5px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.747);
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 86%;
+        background-color: hsl(154, 59%, 51%);
+        height: 40px;
+        box-shadow: 0px 3px 0px 0px hsla(249, 10%, 26%, 0.582);
+      }
+      #lastText{
+        font-size: .6em;
+        color: rgba(128, 128, 128, 0.671);
+        margin: 12px;
+        width: 90%;
+      }
+      ::placeholder{
+        font-size: 12px !important;
+      }
+    }
+    
+    @media only screen and (min-width: 376px) {
+      body{
+        background-color:  hsl(0, 100%, 74%) ;
+        background-image: url(images/bg-intro-desktop.png) ;
+        padding: 0px;
+        width: 100%;
+        display: flex;
+      }
+      #all{
+        align-items: center;
+        display: flex;
+        width: 100%;
+      }
+      .firstDiv{
+        width: 100%;
+        text-align: center;;
+        align-items: center;
+        justify-content: center;
+      }
+      #headerDiv{
+        margin: 70px 0px 0px;
+        width: 100%;
+      }
+      #header{
+        color: white;
+        margin: 0px 0px 0px 0px;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.5em;
+        text-align: left;
+        line-height: 1.1em;
+      }
+      #headerp{
+        justify-content: center;
+        text-align: center;
+        margin: 200px 0px 30px 70px !important;
+      }
+      #matnDiv{
+        justify-content: center;
+        align-items: center;
+        display: block;
+        flex-wrap: wrap;
+        text-align: left;
+        width: 100%;
+        padding: 0px 100px 0px 200px;
+      }
+      #matns{
+        color: rgba(255, 255, 255, 0.966);
+        font-size: 12px;
+        font-family: 'Poppins', sans-serif;
+        height: 50px;
+      }
+      #matn{
+        height: 100px;
+        margin: 0px 0px 0px 0px;
+        width: 370px;
+      }
+      .second-Div{
+        text-align: center;
+        align-items: center;
+        width: 50%;
+        margin: 50px 200px 0px 0px;
+      }
+      .blueBox{
+        line-height: 1.8em;
+        font-family: 'Poppins', sans-serif;
+        color: rgba(255, 255, 255, 0.877);
+        width: 85%;
+        border: 1px solid hsl(248, 32%, 49%);
+        background-color: hsl(248, 32%, 49%);
+        box-shadow: 0px 7px 0px 0px hsla(249, 10%, 26%, 0.253)   ;
+        border-radius: 8px;
+        height: 50px;
+        padding: 14px;
+        margin: 20px auto;
+        font-size: 12px;
+        font-weight: lighter;
+      }
+      #days{
+        font-weight: bold;
+        font-size: 12px;
+      }
+      .box{
+        text-align: center;
+        align-items: center;
+        width: 85%;
+        border: 1px solid white;
+        background-color: white;
+        margin: 10px auto;
+        border-radius: 10px;
+        height: 365px;
+        box-shadow: 0px 6px 0px 0px hsla(248, 9%, 35%, 0.308)   ;
+      }
+      .ins{
+        width: 86%;
+        margin-top: 5px;
+        height: 45px;
+      }
+      #first{
+        margin-top: 30px !important;
+      }
+      .greenButt{
+        align-items: center;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        margin-top: 5px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.747);
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 86%;
+        background-color: hsl(154, 59%, 51%);
+        height: 40px;
+        box-shadow: 0px 3px 0px 0px hsla(154, 55%, 31%, 0.692)   ;
+      }
+      #lastText{
+        font-size: .6em;
+        color: rgba(128, 128, 128, 0.671);
+        margin: 12px;
+        width: 90%;
+      }
+      .disNon{
+        display: none;
+      }
+    }
+
+    ::placeholder{
+        font-family: 'Poppins', sans-serif;
+      font-size: 11px !important;
+      font-weight: bold;
+    }
+    input{
+      border: 1px solid rgba(128, 128, 128, 0.29) !important;
+      border-radius: 5px;
+      height: 40px;
+      width: 90%;
+      padding:  15px;
+      padding-top: 10px;
+      margin: 10px;
+      background-color: transparent;
+    }
+    #servic{
+      font-weight: bold;
+      color: rgba(233, 8, 8, 0.5);
+    }
+  </style>
+</head>
+<body>
+<div class="first-Div">
+  <div id="headerDiv">
+  <span id="header" ><p id="headerp">Learn to code by<br> watching others</p></span>
+</div>
+  <div id="matnDiv">
+  <span id="matns"><p id="matn">See how experienced developers solve<span class="disNon"> <br> </span> problems in real-time. Watching<span class="disNon"> <br> </span> scripted tutorials is great, 
+  but<span class="disNon"> <br> </span> understanding how developers think is<span class="disNon"> <br> </span> invaluable.</p></span> 
+  </div>
+</div>
+<div class="second-Div">
+<div class="blueBox">
+  <span id="days">Try it free 7 days</span> then<span class="disNon"> <br> </span> $20/mo. thereafter
+</div>
+<form class="needs-validation" action="/action_page.php" >
+  <div class="box">
+    <div class="form-group">
+      <input class="form-control ins" id="first" data-validation="oN" data-validationrole="Required"  type="text" placeholder="First Name" required> 
+        <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <input class="form-control ins"  id="second" data-validation="oN" data-validationrole="Required" type="text" placeholder="Last Name" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <input class=" form-control ins"  id="third" data-validation="oN" data-validationrole="Required" type="email" placeholder="Email Address">
+    </div>
+    <div class="form-group">
+      <input class="form-control ins"  id="forth" data-validation="oN" data-validationrole="Required" type="password" placeholder="Password">
+    </div>
+    <button type="submit" class="greenButt  btn btn-primary">   Claim your free trial</button> 
+
+    <div id="lastText">
+      By clicking the button, you are agreeing to<span class="disNon"> <br> </span> our <span id="servic"> Terms and Services</span>
+    </div>
+  </div>
+</form>
+</div>
+</body>
+</html>
